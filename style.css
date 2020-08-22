@@ -1,6 +1,14 @@
-#button {
+.button {
     border: 1px solid white;
     padding: 10px;
-    border-radius: 0px 25px 25px 0px;
-    background-color: lightblue;
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(14, 142, 226);
+}
+
+.fas:hover {
+    color: black;
+}
+
+.fas {
+    color: #fff;
 }

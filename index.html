@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added link for icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Added link for bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Added link for my css file -->
+    <link href="style.css" rel="stylesheet" type="text/css">
     <title>Work Day Scheduler</title>
 </head>
 
@@ -16,9 +23,127 @@
         <p style="text-align: center; margin-bottom: 10px">A simple calendar app for scheduling your work day</p>
         <span id="time-now" style="text-align: center; margin-bottom: 15px; display: block"></span>
         <!--display block to be able to center even with span -->
-        <hr style="border-width: 10px; background-color: black">
+        <hr style="border-width: 10px; margin-bottom: 20px; background-color: black">
     </header>
+
     <div class="container ">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>9AM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="9AM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>10AM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="10AM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>11AM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="11AM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>12PM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="12PM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>1PM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="1PM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>2PM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="2PM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>3PM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="3PM"> </i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>4PM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="4PM"> </i>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <p>5PM</p>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg">
+            </div>
+            <div class="col-md-1 button">
+                <i class="fas fa-save" id="5PM"> </i>
+            </div>
+        </div>
 
 
     </div>
@@ -27,11 +152,6 @@
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js "></script>
-
-<script>
-    var timeNowInfo = document.getElementById("time-now");
-    var currentTime = moment().format('dddd, MMMM Do');
-    timeNowInfo.textContent = currentTime;
-</script>
+<script src="script.js"></script>
 
 </html>
