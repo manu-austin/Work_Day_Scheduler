@@ -11,25 +11,27 @@
 <body>
 
 
-    <header style="text-align: center">Work Day Scheduler</header>
-    <p>A simple calendar app for scheduling your work day</p>
-    <p id="time-now"></p>
-    <hr>
-    <hr>
-
-    <div class="container">
+    <header>
+        <div style="text-align: center; font-weight: bold; margin-top: 10px; font-size:20px">Work Day Scheduler</div>
+        <p style="text-align: center; margin-bottom: 10px">A simple calendar app for scheduling your work day</p>
+        <span id="time-now" style="text-align: center; margin-bottom: 15px; display: block"></span>
+        <!--display block to be able to center even with span -->
+        <hr style="border-width: 10px; background-color: black">
+    </header>
+    <div class="container ">
 
 
     </div>
+
+
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js "></script>
 
 <script>
-    var currentTime = moment().format('dddd MMMM Do YYYY, h:mm:ss a');
-    console.log(currentTime);
-
-    $("#time-now").append.currentTime;
+    var timeNowInfo = document.getElementById("time-now");
+    var currentTime = moment().format('dddd, MMMM Do');
+    timeNowInfo.textContent = currentTime;
 </script>
 
 </html>
