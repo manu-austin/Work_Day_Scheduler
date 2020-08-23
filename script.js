@@ -1,10 +1,24 @@
 var timeNowInfo = document.getElementById("time-now");
 var currentTime = moment().format('dddd, MMMM Do');
-var currentHour = parseInt(moment().format('HH')); //moment was showing a string - parseInt convert to integer
-timeNowInfo.textContent = currentTime;
+var currentHour = parseInt(moment().format('HH')); //moment was showing a string - parseInt converts to integer
+timeNowInfo.textContent = currentTime; // for html purpose show the date in format day, month #th
+var actualDate = moment().format('DDMMYYYY');
+
+// put value to dates and extract dates on the value on each key
+var nineAmContent = localStorage.getItem("9AM");
+var nineAmContentClean = nineAmContent.substring(8, nineAmContent.length);
+var nineAmTimeStored = nineAmContent.substring(0, 8);
+
 
 
 $(document).ready(function() {
+
+    if (actualDate === nineAmTimeStored) {
+        $("#9amContent").val(nineAmContentClean);
+    } else {
+        localStorage.removeItem("9AM");
+    }
+
 
     // put color in boxes based on the time of the day time passed -> grey, current hour -> red, time after -> green
     switch (currentHour) {
@@ -64,5 +78,34 @@ $(document).ready(function() {
 
 $(".fas").on("click", function(event) {
     var buttonclicked = this.id;
-    console.log(buttonclicked);
+
+    switch (buttonclicked) {
+        case "9AM":
+            localStorage.setItem("9AM", actualDate + $("#9amContent").val());
+            break;
+        case "10AM":
+            localStorage.setItem("10AM", actualDate + $("#10amContent").val());
+            break;
+        case "11AM":
+            localStorage.setItem("11AM", actualDate + $("#11amContent").val());
+            break;
+        case "12PM":
+            localStorage.setItem("12PM", actualDate + $("#12pmContent").val());
+            break;
+        case "1PM":
+            localStorage.setItem("1PM", actualDate + $("#1pmContent").val());
+            break;
+        case "2PM":
+            localStorage.setItem("2PM", actualDate + $("#2pmContent").val());
+            break;
+        case "3PM":
+            localStorage.setItem("3PM", actualDate + $("#3pmContent").val());
+            break;
+        case "4PM":
+            localStorage.setItem("4PM", actualDate + $("#4pmContent").val());
+            break;
+        case "5PM":
+            localStorage.setItem("5PM", actualDate + $("#5pmContent").val());
+            break;
+    }
 });
